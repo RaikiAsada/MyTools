@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ukmoving.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="454.0" layoutY="242.0" onAction="#excute" prefHeight="40.0" prefWidth="126.0" text="引越し実行">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <TextField fx:id="fromHostAndPort" layoutX="152.0" layoutY="88.0" promptText="{host}:{Port}" />
+      <Text layoutX="28.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="43.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ホスト:ポート" />
+      <TextField fx:id="fromDbUser" layoutX="152.0" layoutY="160.0" prefHeight="25.0" prefWidth="102.0" />
+      <Text layoutX="45.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User" />
+      <PasswordField fx:id="fromPassword" layoutX="152.0" layoutY="191.0" />
+      <Text layoutX="44.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Text layoutX="316.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="toHostAndPort" layoutX="431.0" layoutY="87.0" promptText="{host}:{Port}" />
+      <Text layoutX="323.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ホスト:ポート" />
+      <TextField fx:id="toDbUser" layoutX="431.0" layoutY="160.0" prefHeight="25.0" prefWidth="102.0" />
+      <Text layoutX="325.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User" />
+      <PasswordField fx:id="toPassword" layoutX="431.0" layoutY="191.0" />
+      <Text layoutX="325.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Text layoutX="28.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="契約コード">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="contractCode" layoutX="152.0" layoutY="29.0" />
+      <Text layoutX="44.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DB名" />
+      <TextField fx:id="fromDbName" layoutX="152.0" layoutY="123.0" />
+      <Text layoutX="323.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DB名" />
+      <TextField fx:id="toDbName" layoutX="431.0" layoutY="123.0" />
+      <TextArea fx:id="logTextArea" layoutX="28.0" layoutY="297.0" prefHeight="259.0" prefWidth="557.0" />
+    </children>
+</AnchorPane>

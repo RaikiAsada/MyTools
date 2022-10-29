@@ -1,0 +1,10 @@
+ext {
+    //規定のエンコーディングをUnicodeで指定するためのプロパティ
+    defaultEncoding = 'UTF-8'
+
+    //javaのバージョンは、1.8固定にする
+    javaVersion = '1.8'
+
+    //testの実行有無を制御するリスト
+    test_skip = [:]
+}

@@ -1,0 +1,8 @@
+テーブル名,カラム名,検証内容,値（※サンプル）
+BSYMT_AFF_COM_HIST,CID,char(36)のカラムにUUID形式でない値が入っています,037825988863-0001                   
+BSYMT_AFF_COM_HIST_ITEM,RECRUIMENT_CATEGORY_CD,char(36)のカラムにUUID形式でない値が入っています,                                    
+KRCMT_BONUS_PAY_ITEM_SET,CID,CID形式でない値が入っています,0                
+KSHMT_WT_COM_WKP,WKP_ID,char(36)のカラムにUUID形式でない値が入っています,1000000                             
+KSRMT_UNIT_PRICE_ITEM_SYA,HIST_ID,char(36)のカラムにUUID形式でない値が入っています,15605                               
+KSRMT_UNIT_PRICE_SYA,HIST_ID,char(36)のカラムにUUID形式でない値が入っています,16439                               
+WWFDT_CONF_FRAME,APPROVER_ID,char(36)のカラムにUUID形式でない値が入っています,00000167                            
