@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ukmoving.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.db.moving.FXMLDocumentController">
     <children>
         <Button fx:id="button" layoutX="454.0" layoutY="242.0" onAction="#excute" prefHeight="40.0" prefWidth="126.0" text="引越し実行">
          <font>

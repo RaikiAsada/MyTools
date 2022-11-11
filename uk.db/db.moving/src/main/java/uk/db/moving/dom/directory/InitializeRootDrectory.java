@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ukmoving.dom.directory;
+package uk.db.moving.dom.directory;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import nts.gul.util.Either;
-import ukmoving.dom.error.UkMovingError;
+import uk.db.moving.dom.error.UkMovingError;
 
 public class InitializeRootDrectory {
 

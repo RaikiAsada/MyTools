@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ukmoving.dom.directory;
+package uk.db.moving.dom.directory;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -18,7 +18,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import nts.gul.util.Either;
-import ukmoving.dom.error.UkMovingError;
+import uk.db.moving.dom.error.UkMovingError;
 
 /**
  * 作業ディレクトリ

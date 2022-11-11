@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ukmoving;
+package uk.db.moving;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -31,17 +31,17 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import nts.gul.util.Either;
-import ukmoving.dom.CheckMovingData;
-import ukmoving.dom.ExportDataToCSV;
-import ukmoving.dom.ImportDataFromCSV;
-import ukmoving.dom.connection.ConnectionInfo;
-import ukmoving.dom.directory.FileType;
-import ukmoving.dom.directory.InitializeRootDrectory;
-import ukmoving.dom.directory.WorkDirectory;
-import ukmoving.dom.error.UkMovingError;
-import ukmoving.dom.error.UkMovingErrorLog;
-import ukmoving.dom.table.TableInfo;
-import ukmoving.dom.table.TableLoader;
+import uk.db.moving.dom.CheckMovingData;
+import uk.db.moving.dom.ExportDataToCSV;
+import uk.db.moving.dom.ImportDataFromCSV;
+import uk.db.moving.dom.connection.ConnectionInfo;
+import uk.db.moving.dom.directory.FileType;
+import uk.db.moving.dom.directory.InitializeRootDrectory;
+import uk.db.moving.dom.directory.WorkDirectory;
+import uk.db.moving.dom.error.UkMovingError;
+import uk.db.moving.dom.error.UkMovingErrorLog;
+import uk.db.moving.dom.table.TableInfo;
+import uk.db.moving.dom.table.TableLoader;
 
 public class FXMLDocumentController implements Initializable {
 

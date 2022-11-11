@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ukmoving.dom.table;
+package uk.db.moving.dom.table;
 
 import java.util.List;
 

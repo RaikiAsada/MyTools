@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ukmoving.dom.connection;
+package uk.db.moving.dom.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import nts.gul.util.Either;
-import ukmoving.dom.error.UkMovingError;
+import uk.db.moving.dom.error.UkMovingError;
 
 /**
  * DBへの接続情報

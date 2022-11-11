@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ukmoving.dom;
+package uk.db.moving.dom;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -12,11 +12,11 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import nts.gul.util.Either;
-import ukmoving.dom.table.TableInfo;
+import uk.db.moving.dom.table.TableInfo;
 import org.postgresql.copy.CopyManager;
 import org.postgresql.core.BaseConnection;
-import ukmoving.dom.directory.FileType;
-import ukmoving.dom.error.UkMovingError;
+import uk.db.moving.dom.directory.FileType;
+import uk.db.moving.dom.error.UkMovingError;
 
 /**
  * データをCSVに出力する

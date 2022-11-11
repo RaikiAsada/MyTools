@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ukmoving.dom.error;
+package uk.db.moving.dom.error;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -12,7 +12,7 @@ import java.util.Map;
 import javafx.application.Platform;
 import javafx.beans.property.ReadOnlyStringProperty;
 import javafx.beans.property.ReadOnlyStringWrapper;
-import ukmoving.dom.table.TableInfo;
+import uk.db.moving.dom.table.TableInfo;
 
 /**
  * エラーをためるログ

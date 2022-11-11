@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ukmoving.dom;
+package uk.db.moving.dom;
 
 import java.util.Objects;
 import nts.gul.util.Either;
-import ukmoving.dom.directory.FileType;
-import ukmoving.dom.error.UkMovingError;
-import ukmoving.dom.table.TableInfo;
+import uk.db.moving.dom.directory.FileType;
+import uk.db.moving.dom.error.UkMovingError;
+import uk.db.moving.dom.table.TableInfo;
 
 /**
  * 引越した結果をチェックする
