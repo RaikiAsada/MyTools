@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\db.moving.jar;%APP_HOME%\lib\lombok-1.16.18.jar;%APP_HOME%\lib\postgresql-42.3.2.jar;%APP_HOME%\lib\nts.gul.jar;%APP_HOME%\lib\guava-23.0.jar;%APP_HOME%\lib\jsr305-1.3.9.jar;%APP_HOME%\lib\error_prone_annotations-2.0.18.jar;%APP_HOME%\lib\j2objc-annotations-1.1.jar;%APP_HOME%\lib\animal-sniffer-annotations-1.14.jar
+set CLASSPATH=%APP_HOME%\lib\db.moving.jar;%APP_HOME%\lib\lombok-1.16.18.jar;%APP_HOME%\lib\nts.gul.jar;%APP_HOME%\lib\postgresql-42.3.2.jar;%APP_HOME%\lib\guava-23.0.jar;%APP_HOME%\lib\jsr305-1.3.9.jar;%APP_HOME%\lib\error_prone_annotations-2.0.18.jar;%APP_HOME%\lib\j2objc-annotations-1.1.jar;%APP_HOME%\lib\animal-sniffer-annotations-1.14.jar
 
 @rem Execute db.moving
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %DB_MOVING_OPTS%  -classpath "%CLASSPATH%" uk.db.moving.MovingUKDB %CMD_LINE_ARGS%
