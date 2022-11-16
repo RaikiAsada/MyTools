@@ -6,16 +6,22 @@
  * user guide available at https://docs.gradle.org/4.10.3/userguide/tutorial_java_projects.html
  */
 
-plugins {
-    // Apply the java plugin to add support for Java
-    id 'java'
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'spring-boot'
+apply plugin: 'com.github.johnrengelman.shadow'
 
-    // Apply the application plugin to add support for building an application
-    id 'application'
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath("com.github.jengelman.gradle.plugins:shadow:4.0.4")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.9.RELEASE")
+    }
 }
-
-// Define the main class for the application
-mainClassName = 'App'
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
@@ -30,4 +36,25 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'tool.moving.Main'
+    }
+}
+
+shadowJar{
+    archiveName = "${baseName}.${extension}"
+}
+
+java {
+	apply from: "$rootDir/gradle/properties.gradle"
+	//ビルド及び実行�、Java8を対象とする
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
 }
