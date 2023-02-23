@@ -10,10 +10,6 @@ apply plugin: 'application'
 apply plugin: 'spring-boot'
 apply plugin: "com.github.johnrengelman.shadow"
 
-repositories {
-    jcenter()
-}
-
 buildscript {
     repositories {
         maven {
