@@ -14,16 +14,18 @@ class Main
 
     Dir.chdir("#{jobPath}\\builds")
 
-    Dir.glob('*').sort_by{|d| File.birthtime(d)}.each do |taskDir|
+    Dir.glob('*').select {|f| File.directory?(f) && f =~ /^\d+$/ }.sort_by{|d| File.birthtime(d)}.each do |taskDir|
       taskPath = "#{jobPath}\\builds\\#{taskDir}"
 
       brunch = readBuildBrunch(taskPath)
-
-      if(isSuccess(taskPath))
-        successBrunches << brunch
-      else
-        if(successBrunches.include?(brunch))
-          successBrunches.delete(brunch)
+      
+      if(brunch)
+        if(isSuccess(taskPath))
+          successBrunches << brunch
+        else
+          if(successBrunches.include?(brunch))
+            successBrunches.delete(brunch)
+          end
         end
       end
     end
@@ -33,7 +35,11 @@ class Main
     end
   end
 
-  def readBuildBrunch(taskPath)
+  def readBuildBrunch(taskPath)    
+    if(!File.exist?("#{taskPath}\\build.xml"))
+      return
+    end
+    
     Dir.chdir taskPath
     doc = REXML::Document.new File.new("build.xml")
     return doc.elements['build/actions/hudson.model.ParametersAction/parameters/net.uaznia.lukanus.hudson.plugins.gitparameter.GitParameterValue/value'].text
