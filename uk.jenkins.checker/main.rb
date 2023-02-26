@@ -12,9 +12,10 @@ class Main
 
     successBrunches = []
 
-    Dir.chdir jobPath
+    Dir.chdir("#{jobPath}\\builds")
+
     Dir.glob('*').sort_by{|d| File.birthtime(d)}.each do |taskDir|
-      taskPath = "#{jobPath}\\#{taskDir}"
+      taskPath = "#{jobPath}\\builds\\#{taskDir}"
 
       brunch = readBuildBrunch(taskPath)
 
