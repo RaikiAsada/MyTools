@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-load './dom/jenkins_build.rb'
+require './dom/jenkins_build.rb'
 class JenkinsJob
   attr_reader :jobName
 
@@ -17,7 +17,7 @@ class JenkinsJob
     return Dir.glob('*')
               .select {|file| File.directory?(file)}
               .select { | dir| dir =~ /^\d+$/ }
-              .map {|buildDir| JenkinsBuild.new(getJobPath, buildDir, File.birthtime(buildDir))}
+              .map {|buildDir| JenkinsBuild.new(getJobPath, buildDir)}
   end
 
   private def getJobPath

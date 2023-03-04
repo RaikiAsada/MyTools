@@ -11,7 +11,7 @@ def main(rootDir, jobName)
 
   successBrunches = []
 
-  job.getBuilds.sort_by{|build| build.createDate}.each do |build|
+  job.getBuilds.sort_by{|build| build.number}.each do |build|
     brunch = build.get_brunch
 
     if(brunch)
