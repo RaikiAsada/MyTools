@@ -24,7 +24,7 @@ class JenkinsJob
     return "#{@rootDir}\\#{@jobName}"
   end
 
-  private def getBuildsPath
+  def getBuildsPath
     return "#{getJobPath}\\builds"
   end
 end
