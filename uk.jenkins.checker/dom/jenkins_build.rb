@@ -4,6 +4,9 @@ require './dom/parameter_type.rb'
 
 class JenkinsBuild
   attr_reader :number
+  def self.builds_path(job)
+    return "#{job.getJobPath}\\builds"
+  end
   def initialize(jobPath, number)
     @number = number
     @buildXml = BuildXml.new(jobPath, number)
