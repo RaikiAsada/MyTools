@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-require './dom/jenkins_job.rb'
-require './dom/jenkins_build.rb'
+require './dom/base/jenkins_job.rb'
+require './dom/base/jenkins_build.rb'
 class SelectBrunchBuild < JenkinsBuild
   def self.load(job)
     Dir.chdir(JenkinsBuild.builds_path(job))

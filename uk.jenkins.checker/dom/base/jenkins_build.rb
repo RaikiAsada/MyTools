@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-require './dom/build_xml.rb'
-require './dom/parameter_type.rb'
+require './dom/base/build_xml.rb'
+require './dom/base/parameter_type.rb'
 
 class JenkinsBuild
   attr_reader :number

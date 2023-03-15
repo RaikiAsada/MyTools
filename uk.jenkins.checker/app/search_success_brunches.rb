@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-load './dom/jenkins_job.rb'
-load './dom/jenkins_build.rb'
+require './dom/base/jenkins_job.rb'
+require './dom/select_brunch_build.rb'
 def main(rootDir, jobName)
   job = JenkinsJob.new(rootDir, jobName)
 
