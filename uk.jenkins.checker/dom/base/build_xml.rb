@@ -9,37 +9,32 @@ class BuildXml
 
   def get_parameter(parameterType, parameterName)
     parameter_value = nil
-    parameters = get_elements("#{BUILD_XML_ROOT}/actions/hudson.model.ParametersAction/parameters")
 
-    if !parameters
-      return parameter_value
-    end
+    get_param = -> (element)  {
+      element.elements.each(parameterType) do | child |
+        get_element_text = -> (grandchild) { grandchild.text }
 
-    parameters.elements.each(parameterType) do | element |
-      if element.elements["name"].text == parameterName
-        parameter_value = element.elements["value"].text
+        if child.get_element("name", get_element_text) == parameterName
+          parameter_value = child.get_element("value", get_element_text)
+        end
       end
-    end
+    }
 
+    get_element("#{BUILD_XML_ROOT}/actions/hudson.model.ParametersAction/parameters", get_param)
     return parameter_value
   end
 
   def get_result
-    elements = get_elements('build/result')
-
-    if !elements
-      return nil
-    end
-
-    return elements.text
+    get_element_text = -> (element) { element.text }
+    return get_element('build/result', get_element_text)
   end
 
-  def get_elements(path)
+  def get_element(path, parse_element)
     if(!@doc)
       return nil
     end
 
-    return @doc.elements[path]
+    return parse_element.call(@doc.elements[path])
   end
 
   private def get_build_dir_path(jobPath, number)
