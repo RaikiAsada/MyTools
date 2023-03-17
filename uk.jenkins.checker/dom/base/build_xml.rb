@@ -9,7 +9,11 @@ class BuildXml
 
   def get_parameter(parameterType, parameterName)
     parameter_value = nil
-    parameters = @doc.elements["#{BUILD_XML_ROOT}/actions/hudson.model.ParametersAction/parameters"]
+    parameters = get_elements("#{BUILD_XML_ROOT}/actions/hudson.model.ParametersAction/parameters")
+
+    if !parameters
+      return parameter_value
+    end
 
     parameters.elements.each(parameterType) do | element |
       if element.elements["name"].text == parameterName
@@ -21,14 +25,35 @@ class BuildXml
   end
 
   def get_result
-    return @doc.elements['build/result'].text
+    elements = get_elements('build/result')
+
+    if !elements
+      return nil
+    end
+
+    return elements.text
+  end
+
+  def get_elements(path)
+    if(!@doc)
+      return nil
+    end
+
+    return @doc.elements[path]
   end
 
   private def get_build_dir_path(jobPath, number)
     return "#{jobPath}\\builds\\#{number}"
   end
   private def read_buildXml(jobPath, number)
-    Dir.chdir(get_build_dir_path(jobPath, number))
-    return REXML::Document.new(File.new("build.xml"))
+    buildDir = get_build_dir_path(jobPath, number)
+    fileName = "build.xml"
+
+    if (!File.exist?("#{buildDir}\\#{fileName}"))
+      return nil
+    end
+
+    Dir.chdir(buildDir)
+    return REXML::Document.new(File.new(fileName))
   end
 end

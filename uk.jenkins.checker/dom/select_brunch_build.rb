@@ -1,13 +1,13 @@
 # frozen_string_literal: true
-require './base/jenkins_job.rb'
-require './base/jenkins_build.rb'
+require './dom/base/jenkins_job.rb'
+require './dom/base/jenkins_build.rb'
 class SelectBrunchBuild < JenkinsBuild
   def self.load(job)
     Dir.chdir(JenkinsBuild.builds_path(job))
     return Dir.glob('*')
               .select {|file| File.directory?(file)}
               .select { | dir| dir =~ /^\d+$/ }
-              .map {|buildDir| SelectBrunchBuild.new(getJobPath, buildDir)}
+              .map {|buildDir| SelectBrunchBuild.new(job.getJobPath, buildDir)}
   end
   def initialize(rootDir, jobName)
     super(rootDir, jobName)

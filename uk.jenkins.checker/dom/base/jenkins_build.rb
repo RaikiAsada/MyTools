@@ -8,7 +8,7 @@ class JenkinsBuild
     return "#{job.getJobPath}\\builds"
   end
   def initialize(jobPath, number)
-    @number = number
+    @number = number.to_i
     @buildXml = BuildXml.new(jobPath, number)
   end
   def get_brunch

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-require_relative  '../dom/base/jenkins_job.rb'
-require_relative  '../dom/select_brunch_build.rb'
+require './dom/base/jenkins_job.rb'
+require './dom/select_brunch_build.rb'
 
 def main(rootDir, jobName)
   job = JenkinsJob.new(rootDir, jobName)
