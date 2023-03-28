@@ -3,7 +3,7 @@ require 'rexml/document'
 class GeneralXmlElement
   def self.build_for_doc(path)
     if (!File.exist?(path))
-      return GeneralXmlElement.new(nilç)
+      return GeneralXmlElement.new(nil)
     end
 
     doc = REXML::Document.new(File.new(path))
