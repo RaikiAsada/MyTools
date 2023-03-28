@@ -8,10 +8,11 @@ class JenkinsJob
   end
 
   def exist?
+    puts getJobPath
     return Dir.exist?(getJobPath)
   end
 
   def getJobPath
-    return "#{@rootDir}\\#{@jobName}"
+    return File.join(@rootDir, @jobName)
   end
 end
