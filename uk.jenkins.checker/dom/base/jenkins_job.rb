@@ -8,7 +8,6 @@ class JenkinsJob
   end
 
   def exist?
-    puts getJobPath
     return Dir.exist?(getJobPath)
   end
 
