@@ -5,7 +5,6 @@ class GeneralXmlElement
     if (!File.exist?(path))
       return GeneralXmlElement.new(nil)
     end
-
     doc = REXML::Document.new(File.new(path))
     return GeneralXmlElement.new(doc)
   end
@@ -24,9 +23,11 @@ class GeneralXmlElement
   end
 
   def get_child_elements(path)
-    return @element&.elements[path].map do |element|
-      return GeneralXmlElement.new(element)
+    if @element.nil?
+      return []
     end
+
+    return @element.elements[path].elements.map {|element| GeneralXmlElement.new(element)}
   end
 
 end

@@ -11,10 +11,6 @@ class JenkinsBuild
     @number = number.to_i
     @buildXml = BuildXml.new(jobPath, number)
   end
-  def get_brunch
-    return @buildXml.get_parameter(ParameterType::JENKINS_GIT_PARAM, 'BRANCH')
-  end
-
   def success?
     result = @buildXml.get_result
     return result.eql?('SUCCESS')

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require './dom/base/jenkins_job.rb'
-require './dom/select_brunch_build.rb'
+require './dom/build_brunch_history.rb'
 
 def main(rootDir, jobName)
   job = JenkinsJob.new(rootDir, jobName)
@@ -10,24 +10,13 @@ def main(rootDir, jobName)
     return
   end
 
-  successBrunches = []
+  build_history = BuildBrunchHistory.load(job)
+  build_history.build_brunches.each do |brunch|
+    last_build = build_history.last_build(brunch)
 
-  SelectBrunchBuild.load(job).sort_by{|build| build.number}.each do |build|
-    brunch = build.get_brunch
-
-    if(brunch)
-      if(build.success?)
-        successBrunches << brunch
-      else
-        if(successBrunches.include?(brunch))
-          successBrunches.delete(brunch)
-        end
-      end
+    if(last_build.success?)
+      puts(brunch)
     end
-  end
-
-  successBrunches.uniq.each do |brunch|
-    puts(brunch)
   end
 end
 

@@ -3,7 +3,7 @@ class JenkinsJob
   attr_reader :jobName
 
   def initialize(rootDir, jobName)
-    @rootDir = rootDir
+    @rootDir = File.expand_path(rootDir)
     @jobName = jobName
   end
 
