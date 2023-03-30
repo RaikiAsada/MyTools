@@ -1,36 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4ec3d905-f309-4036-845c-d67c7107b9bb" name="変更" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uk.jenkins.utils/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uk.jenkins.utils/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uk.jenkins.utils/.idea/uk.jenkins..checker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../uk.jenkins.utils/.idea/uk.jenkins..checker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../uk.jenkins.utils/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../uk.jenkins.utils/Gemfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uk.jenkins.utils/dom/base/build_result.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../uk.jenkins.utils/get_build_history.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uk.jenkins.utils/dom/base/jenkins_build.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../uk.jenkins.utils/dom/base/jenkins_build.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uk.jenkins.utils/dom/base/jenkins_job.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../uk.jenkins.utils/dom/base/jenkins_job.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Ruby Class" />
+        <option value="Ruby Module" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NjkDK6f1g663mWGoM2oVgCoSaq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
@@ -43,6 +61,7 @@
       <workItem from="1680184758316" duration="119000" />
       <workItem from="1680185046587" duration="57000" />
       <workItem from="1680185112856" duration="16000" />
+      <workItem from="1680185181252" duration="1648000" />
     </task>
     <servers />
   </component>

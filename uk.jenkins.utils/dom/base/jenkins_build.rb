@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require './dom/base/build_xml.rb'
 require './dom/base/parameter_type.rb'
+require './dom/base/build_result.rb'
 
 class JenkinsBuild
   attr_reader :number
@@ -12,7 +13,9 @@ class JenkinsBuild
     @buildXml = BuildXml.new(jobPath, number)
   end
   def success?
-    result = @buildXml.get_result
-    return result.eql?('SUCCESS')
+    return build_result.eql?(BuildResult::SUCCESS)
+  end
+  def build_result
+    return @buildXml.get_result
   end
 end
